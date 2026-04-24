@@ -22,6 +22,6 @@ class ProductoDigital extends Producto{
         this.descuento = descuento;
     }
      calcularPrecioFinal(){
-        return this.descuento / 100 * this.precio;
+        return (this.descuento / 100) * this.precio;
      }
 }
