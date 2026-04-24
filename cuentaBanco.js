@@ -20,7 +20,6 @@ class CuentaBancaria {
         this.#saldo -= monto;
         this.#historial.push({ tipo: "retiro", monto });
     }
-
     getSaldo() {
         return this.#saldo;
     }
@@ -31,7 +30,9 @@ class CuentaBancaria {
 }
 const cuenta1 = new CuentaBancaria("Fabrizio", 1000);
 cuenta1.depositar(500);
+console.log(cuenta1.getHistorial());
 console.log(cuenta1.getSaldo()); 
 cuenta1.retirar(200);
 console.log(cuenta1.getSaldo());
+
 console.log(cuenta1.getHistorial());
